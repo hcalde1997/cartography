@@ -77,6 +77,7 @@ def load_load_balancer_v2s(
     SET r.lastupdated = $update_tag
     """
     for lb in data:
+        print(lb)
         load_balancer_id = lb["DNSName"]
 
         neo4j_session.run(
